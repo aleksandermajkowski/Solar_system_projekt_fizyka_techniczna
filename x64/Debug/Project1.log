@@ -1,0 +1,148 @@
+﻿  solar_system.cpp
+C:\Users\olekm\source\repos\Project1\solar_system.cpp(38,17): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\olekm\source\repos\Project1\solar_system.cpp(39,17): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244: "inicjowanie": konwersja z "_Ty" do "_Ty", możliwa utrata danych
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:             _Ty=float
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         ]
+  (kompilowanie pliku źródłowego „solar_system.cpp”)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47):
+  kontekst tworzenia wystąpienia szablonu (najpierw najstarszy) to
+  	C:\Users\olekm\source\repos\Project1\solar_system.cpp(80,24):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<const char*,sf::Color,int,int,int,0>(std::tuple<const char *,sf::Color,int,int,int> &&) noexcept(false)” funkcji szablon
+  		C:\Users\olekm\source\repos\Project1\solar_system.cpp(79,87):
+  		zobacz pierwsze odwołanie do elementu „std::tuple<std::string,sf::Color,float,float,float>::tuple” w „main”
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(388,16):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Unpack_tuple_t,std::tuple<const char *,sf::Color,int,int,int>,0>(_Tag,_Tpl &&)” funkcji szablon
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<const char *,sf::Color,int,int,int>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(322,16):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Unpack_tuple_t,_Ty,0,1,2,3,4,0>(_Tag,_Tpl &&,std::integer_sequence<size_t,0,1,2,3,4>)” funkcji szablon
+          with
+          [
+              _Ty=std::tuple<const char *,sf::Color,int,int,int>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<const char *,sf::Color,int,int,int>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(1002,12):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Exact_args_t,const char*,sf::Color,int,int,int,0>(_Tag,_This2 &&,sf::Color &&,int &&,int &&,int &&)” funkcji szablon
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=const char *
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,18):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<sf::Color,float,float,float>::tuple<std::_Exact_args_t,_Ty,int,int,int,0>(_Tag,_This2 &&,int &&,int &&,int &&)” funkcji szablon
+          with
+          [
+              _Ty=sf::Color,
+              _Tag=std::_Exact_args_t,
+              _This2=sf::Color
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,18):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<float,float,float>::tuple<std::_Exact_args_t,_Ty,_Ty,_Ty,0>(_Tag,_This2 &&,_Ty &&,_Ty &&)” funkcji szablon
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=int
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,102):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)” funkcji szablon
+          with
+          [
+              _This=float,
+              _Ty=int,
+              _Other=int
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244: "inicjowanie": konwersja z "_Ty" do "_Ty", możliwa utrata danych
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:             _Ty=double
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:             _Ty=float
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         ]
+  (kompilowanie pliku źródłowego „solar_system.cpp”)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47):
+  kontekst tworzenia wystąpienia szablonu (najpierw najstarszy) to
+  	C:\Users\olekm\source\repos\Project1\solar_system.cpp(82,24):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<const char*,sf::Color,int,int,double,0>(std::tuple<const char *,sf::Color,int,int,double> &&) noexcept(false)” funkcji szablon
+  		C:\Users\olekm\source\repos\Project1\solar_system.cpp(79,87):
+  		zobacz pierwsze odwołanie do elementu „std::tuple<std::string,sf::Color,float,float,float>::tuple” w „main”
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(388,16):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Unpack_tuple_t,std::tuple<const char *,sf::Color,int,int,double>,0>(_Tag,_Tpl &&)” funkcji szablon
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<const char *,sf::Color,int,int,double>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(322,16):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Unpack_tuple_t,_Ty,0,1,2,3,4,0>(_Tag,_Tpl &&,std::integer_sequence<size_t,0,1,2,3,4>)” funkcji szablon
+          with
+          [
+              _Ty=std::tuple<const char *,sf::Color,int,int,double>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=std::tuple<const char *,sf::Color,int,int,double>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(1002,12):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Exact_args_t,const char*,sf::Color,int,int,double,0>(_Tag,_This2 &&,sf::Color &&,int &&,int &&,double &&)” funkcji szablon
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=const char *
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,18):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<sf::Color,float,float,float>::tuple<std::_Exact_args_t,_Ty,int,int,double,0>(_Tag,_This2 &&,int &&,int &&,double &&)” funkcji szablon
+          with
+          [
+              _Ty=sf::Color,
+              _Tag=std::_Exact_args_t,
+              _This2=sf::Color
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,18):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<float,float,float>::tuple<std::_Exact_args_t,_Ty,_Ty,double,0>(_Tag,_This2 &&,_Ty &&,double &&)” funkcji szablon
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=int
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,18):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<float,float>::tuple<std::_Exact_args_t,_Ty,double,0>(_Tag,_This2 &&,double &&)” funkcji szablon
+          with
+          [
+              _Ty=int,
+              _Tag=std::_Exact_args_t,
+              _This2=int
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,18):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<float>::tuple<std::_Exact_args_t,_Ty,,0>(_Tag,_This2 &&)” funkcji szablon
+          with
+          [
+              _Ty=double,
+              _Tag=std::_Exact_args_t,
+              _This2=double
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(315,102):
+  	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::_Tuple_val<_This>::_Tuple_val<_Ty>(_Other &&)” funkcji szablon
+          with
+          [
+              _This=float,
+              _Ty=double,
+              _Other=double
+          ]
+  
+  Project1.vcxproj -> C:\Users\olekm\source\repos\Project1\x64\Debug\Project1.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

@@ -1,0 +1,135 @@
+
+// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
+// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
+//Author: Aleksander Majkowski, Faculty of Physics, Warsaw University of Technology
+#include <iostream>
+#include <SFML/Graphics.hpp>
+#include <string>
+#include <fstream>
+#include <vector>
+#include <cmath> 
+using namespace std;
+
+struct planet {
+    const double scale_factor = 1e-5;
+    string name;
+    double Rmin = 0, Rmax = 0, mass = 0, epsilon = 0, p = 0, a = 0, b = 0;
+    const double G = 6.674e-11;
+    const double SunMass = 1.989e30;
+    vector<double> x;
+    vector<double> y;
+    vector<double> eccentricities; // ekscentrycznoœæ w danym momencie
+    vector<double> velocities;     // predkoœæ w danym czasie
+
+    int period = 0;
+};
+
+class ellipse : public planet {
+    vector<planet>& planets;
+
+public:
+    ellipse(vector<planet>& planets) : planets(planets) {}
+    void calculate_xy();
+    static void loadPlanetData(vector<planet>& planets);
+};
+
+void ellipse::calculate_xy() {
+    for (auto& P : planets) {
+        P.p = 2 / ((1 / P.Rmax) + (1 / P.Rmin));
+        P.epsilon = (P.Rmax - P.Rmin) / (P.Rmax + P.Rmin);
+        P.a = (P.Rmax + P.Rmin) / 2;
+        P.b = sqrt(P.Rmax * P.Rmin);
+        for (int i = 0; i < P.period; i++) {
+            double theta = (i * 2 * 3.14) / P.period;
+            double K = P.p / (1 + P.epsilon * cos(theta));
+            double x = K * cos(theta);
+            double y = K * sin(theta);
+            P.x.push_back(x);
+            P.y.push_back(y);
+            //cout << x << " " << y << endl;
+
+            // obliczenia ekscentrycznoœci i prêdkoœci
+            double r = K / (1 - P.epsilon * cos(theta));
+            double v = sqrt((P.G * (P.mass + P.SunMass)) * ((2 / r) - (1 / P.Rmax)));
+            P.eccentricities.push_back(P.epsilon);
+            P.velocities.push_back(v);
+        }
+    }
+}
+
+void ellipse::loadPlanetData(vector<planet>& planets) {
+    ifstream inputFile("./data.txt");
+    planet newPlanet;
+    if (!inputFile.is_open()) {
+        cerr << "Error opening the data file." << endl;
+        return;
+    }
+    while (inputFile >> newPlanet.name >> newPlanet.Rmax >> newPlanet.Rmin >> newPlanet.mass >> newPlanet.period) {
+        planets.push_back(newPlanet);
+        cout << "Loaded planet: " << newPlanet.name << endl;
+        inputFile.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore the rest of the line
+    }
+}
+int main(int argc, char* argv[]) {
+    vector<planet> planets;
+    ellipse myEllipse(planets);
+    myEllipse.loadPlanetData(planets);
+    myEllipse.calculate_xy();
+
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Solar System");
+    vector<sf::VertexArray> orbits;
+
+    // Calculate orbits for a number of time steps
+    int numTimeSteps = 1000;
+    for (int step = 0; step < numTimeSteps; ++step) {
+        // Clear orbits vector
+        orbits.clear();
+
+        // Update positions for each planet
+        for (auto& planet : planets) {
+            // Clear previous positions
+            planet.x.clear();
+            planet.y.clear();
+
+            // Recalculate positions for the current time step
+            double theta_step = (2 * 3.14 * step) / planet.period;
+            double K_step = planet.p / (1 + planet.epsilon * cos(theta_step));
+            double x_step = K_step * cos(theta_step);
+            double y_step = K_step * sin(theta_step);
+            planet.x.push_back(x_step);
+            planet.y.push_back(y_step);
+
+            // Update orbits vector
+            sf::VertexArray orbit(sf::LineStrip, planet.x.size());
+            for (size_t i = 0; i < planet.x.size(); i++) {
+                double scaled_x = planet.x[i] * planet.scale_factor;
+                double scaled_y = planet.y[i] * planet.scale_factor;
+                orbit[i].position = sf::Vector2f(static_cast<float>(scaled_x), static_cast<float>(scaled_y));
+                orbit[i].color = sf::Color::Green;
+            }
+            orbits.push_back(orbit);
+        }
+
+        // Draw orbits for the current time step
+        window.clear();
+        for (const auto& orbit : orbits) {
+            window.draw(orbit);
+        }
+        window.display();
+
+        // Pause to observe the orbits
+        sf::sleep(sf::milliseconds(50));
+    }
+
+    // Keep the window open until manually closed
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            }
+        }
+    }
+
+    return 0;
+}
