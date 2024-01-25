@@ -1,6 +1,6 @@
 ﻿  solar_system.cpp
-C:\Users\olekm\source\repos\Project1\solar_system.cpp(38,17): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\olekm\source\repos\Project1\solar_system.cpp(39,17): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\olekm\source\repos\Project1\solar_system.cpp(45,17): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\olekm\source\repos\Project1\solar_system.cpp(46,17): warning C4244: "inicjowanie": konwersja z "double" do "float", możliwa utrata danych
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244: "inicjowanie": konwersja z "_Ty" do "_Ty", możliwa utrata danych
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         with
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47): warning C4244:         [
@@ -13,9 +13,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.3313
   (kompilowanie pliku źródłowego „solar_system.cpp”)
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47):
   kontekst tworzenia wystąpienia szablonu (najpierw najstarszy) to
-  	C:\Users\olekm\source\repos\Project1\solar_system.cpp(80,24):
+  	C:\Users\olekm\source\repos\Project1\solar_system.cpp(95,24):
   	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<const char*,sf::Color,int,int,int,0>(std::tuple<const char *,sf::Color,int,int,int> &&) noexcept(false)” funkcji szablon
-  		C:\Users\olekm\source\repos\Project1\solar_system.cpp(79,87):
+  		C:\Users\olekm\source\repos\Project1\solar_system.cpp(94,87):
   		zobacz pierwsze odwołanie do elementu „std::tuple<std::string,sf::Color,float,float,float>::tuple” w „main”
   	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(388,16):
   	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Unpack_tuple_t,std::tuple<const char *,sf::Color,int,int,int>,0>(_Tag,_Tpl &&)” funkcji szablon
@@ -76,9 +76,9 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.3313
   (kompilowanie pliku źródłowego „solar_system.cpp”)
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(143,47):
   kontekst tworzenia wystąpienia szablonu (najpierw najstarszy) to
-  	C:\Users\olekm\source\repos\Project1\solar_system.cpp(82,24):
+  	C:\Users\olekm\source\repos\Project1\solar_system.cpp(97,24):
   	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<const char*,sf::Color,int,int,double,0>(std::tuple<const char *,sf::Color,int,int,double> &&) noexcept(false)” funkcji szablon
-  		C:\Users\olekm\source\repos\Project1\solar_system.cpp(79,87):
+  		C:\Users\olekm\source\repos\Project1\solar_system.cpp(94,87):
   		zobacz pierwsze odwołanie do elementu „std::tuple<std::string,sf::Color,float,float,float>::tuple” w „main”
   	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\tuple(388,16):
   	zobacz odwołanie do kompilowanego tworzenia wystąpienia „std::tuple<std::string,sf::Color,float,float,float>::tuple<std::_Unpack_tuple_t,std::tuple<const char *,sf::Color,int,int,double>,0>(_Tag,_Tpl &&)” funkcji szablon
